@@ -14,7 +14,7 @@ const ManageEmployeeLeave = ({ leave_id, initialState, refetchLeaves }) => {
       return alert("Please select leave first");
 
     const response = await fetch(
-      `${import.meta.env.VITE_APP_BASE_URL}/api/leave/updateLeaves`,
+      `http://localhost:5050/api/leave/updateLeaves`,
       {
         method: "PUT",
         headers: {

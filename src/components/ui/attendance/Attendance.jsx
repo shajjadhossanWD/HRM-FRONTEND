@@ -8,7 +8,7 @@ import SingleUserAttendance from "./SingleUserAttendance";
 const Attendance = () => {
   const getAllAttendance = async () => {
     const response = await axiosInstance.get(
-      "/api/attendance/getAllAttendance"
+      "http://localhost:5050/api/attendance/getAllAttendance"
     );
     console.log(response.data);
     return response.data;

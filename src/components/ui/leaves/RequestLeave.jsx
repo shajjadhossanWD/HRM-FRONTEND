@@ -9,7 +9,7 @@ import secureLocalStorage from "react-secure-storage";
 
 const requestLeave = async (data) => {
   try {
-    const response = await axiosInstance.post("/api/leave/createLeave", data);
+    const response = await axiosInstance.post("http://localhost:5050/api/leave/createLeave", data);
 
     toast.success(`Application Submitted Successfully`, {
       style: {

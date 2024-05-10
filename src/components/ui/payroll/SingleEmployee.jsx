@@ -33,7 +33,7 @@ const SingleEmployee = ({ employee }) => {
   useEffect(() => {
     const getSalaryForEmployee = async () => {
       const response = await axiosInstance.get(
-        `/api/payroll/getsalary/${employee.employee_id}`
+        `http://localhost:5050/api/payroll/getsalary/${employee.employee_id}`
       );
 
       if (response.data.result.length > 0) {
@@ -48,7 +48,7 @@ const SingleEmployee = ({ employee }) => {
   // handle Add Salary
   const addSalary = async (data) => {
     const response = await axiosInstance.post(
-      "/api/payroll/createsalary",
+      "http://localhost:5050/api/payroll/createsalary",
       data
     );
     return response.data;
@@ -76,7 +76,7 @@ const SingleEmployee = ({ employee }) => {
   // handle Add Deduction
   const addDeduction = async (data) => {
     const response = await axiosInstance.post(
-      "/api/payroll/creatededuction",
+      "http://localhost:5050/api/payroll/creatededuction",
       data
     );
     return response.data;
@@ -106,7 +106,7 @@ const SingleEmployee = ({ employee }) => {
   // handle Add Allowance
   const addAllowance = async (data) => {
     const response = await axiosInstance.post(
-      "/api/payroll/createallowence",
+      "http://localhost:5050/api/payroll/createallowence",
       data
     );
     return response.data;
@@ -137,7 +137,7 @@ const SingleEmployee = ({ employee }) => {
 
   const addPayroll = async (data) => {
     const response = await axiosInstance.post(
-      "/api/payroll/createpayroll",
+      "http://localhost:5050/api/payroll/createpayroll",
       data
     );
     return response.data;

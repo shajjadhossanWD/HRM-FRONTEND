@@ -14,7 +14,7 @@ import { FaRegCalendarMinus } from "react-icons/fa";
 const EmployeeLeaveDetails = () => {
   const getAllLeaves = async () => {
     const response = await axiosInstance.get(
-      `/api/leave/getEmployeeLeave/` +
+      `http://localhost:5050/api/leave/getEmployeeLeave/` +
         secureLocalStorage.getItem("user").employee_id
     );
     console.log(response.data);

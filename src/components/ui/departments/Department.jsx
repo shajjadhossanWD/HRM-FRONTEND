@@ -7,7 +7,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 const Department = () => {
   const getAllDepartments = async () => {
     const response = await axiosInstance.get(
-      "/api/department/getAllDepartment"
+      "http://localhost:5050/api/department/getAllDepartment"
     );
     return response.data;
   };

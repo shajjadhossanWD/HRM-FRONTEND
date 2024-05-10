@@ -67,6 +67,9 @@ function App() {
                 )
               }
             />
+            {/* <Route path="admin" element={<Dashboard />} /> */}
+            {/* <Route path="manager" element={<ManagerDashboard />} /> */}
+            {/* <Route path="employee/dashboard" element={<EmployeeDashboard />} /> */}
             <Route path="employee" element={<Employee />} />
             <Route path="employee/add" element={<AddEmployee />} />
             <Route path="department" element={<Department />} />
@@ -89,6 +92,7 @@ function App() {
             <Route path="settings" element={<Settings />} />
             <Route path="/payroll" element={<Payroll />} />
             <Route path="/payroll/add" element={<Addpayroll />} />
+
           </Route>
         </Route>
         <Route

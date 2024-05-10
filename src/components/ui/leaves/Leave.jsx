@@ -7,7 +7,7 @@ import ManageEmployeeLeave from "./ManageEmployeeLeave";
 
 const Leave = () => {
   const getAllLeaves = async () => {
-    const response = await axiosInstance.get("/api/leave/getLeaves");
+    const response = await axiosInstance.get("http://localhost:5050/api/leave/getLeaves");
     console.log(response.data);
     return response.data;
   };

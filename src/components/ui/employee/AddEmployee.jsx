@@ -10,7 +10,7 @@ import axiosInstance from "../../../api/axios";
 const createUser = async (data) => {
   try {
     const response = await axiosInstance.post(
-      "/api/employee/createEmployee",
+      "http://localhost:5050/api/employee/createEmployee",
       data
     );
 
@@ -51,7 +51,7 @@ const AddEmployee = () => {
     const getAllDepartments = async () => {
       try {
         const response = await axiosInstance.get(
-          "/api/department/getAllDepartment"
+          "http://localhost:5050/api/department/getAllDepartment"
         );
         setDepartments(response.data.result);
       } catch (error) {
@@ -61,7 +61,7 @@ const AddEmployee = () => {
     const getAllPositions = async () => {
       try {
         const response = await axiosInstance.get(
-          "/api/position/getAllPositions"
+          "http://localhost:5050/api/position/getAllPositions"
         );
         setPositions(response.data.data);
       } catch (error) {

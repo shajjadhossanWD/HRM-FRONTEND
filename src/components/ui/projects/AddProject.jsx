@@ -16,7 +16,7 @@ import { MdCancel } from "react-icons/md";
 // create User & Employee function
 const createProject = async (data) => {
   const response = await fetch(
-    `${import.meta.env.VITE_APP_BASE_URL}/api/project/createProject`,
+    `http://localhost:5050/api/project/createProject`,
     {
       method: "POST",
       headers: {
@@ -59,7 +59,7 @@ const AddProject = () => {
 
   useEffect(() => {
     const getAllPositions = async () => {
-      const response = await axiosInstance.get("/api/position/getAllPositions");
+      const response = await axiosInstance.get("http://localhost:5050/api/position/getAllPositions");
       if (response.data) {
         setSelectPositionValues(response.data.data);
       }
@@ -69,7 +69,7 @@ const AddProject = () => {
 
   const searchEmployee = async (data) => {
     const response = await axiosInstance.post(
-      "/api/project/searchByName",
+      "http://localhost:5050/api/project/searchByName",
       data
     );
     return response.data;

@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 // create User & Employee function
 const createUser = async (data) => {
   const response = await fetch(
-    `${import.meta.env.VITE_APP_BASE_URL}/api/position/createPosition`,
+    `http://localhost:5050/api/position/createPosition`,
     {
       method: "POST",
       headers: {

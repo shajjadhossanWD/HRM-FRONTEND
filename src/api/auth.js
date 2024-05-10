@@ -4,7 +4,7 @@ import axios from "axios";
 export const refreshToken = async () => {
   try {
     const response = await axios.post(
-      `${import.meta.env.VITE_APP_BASE_URL}/api/auth/refresh`,
+      `http://localhost:5050/api/auth/refresh`,
       {
         refreshToken: secureLocalStorage.getItem("refreshToken"),
       },

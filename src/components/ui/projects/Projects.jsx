@@ -8,7 +8,7 @@ import { motion } from "framer-motion"; // Import Framer Motion
 
 const Projects = () => {
   const getAllProjects = async () => {
-    const response = await axiosInstance.get("/api/project/getProjects");
+    const response = await axiosInstance.get("http://localhost:5050/api/project/getProjects");
     return response.data;
   };
 

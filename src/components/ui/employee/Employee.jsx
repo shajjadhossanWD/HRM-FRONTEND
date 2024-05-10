@@ -13,7 +13,7 @@ import { GrAscend } from "react-icons/gr";
 
 const Employee = () => {
   const getAllEmployees = async () => {
-    const response = await axiosInstance.get("/api/employee/getAllEmployees");
+    const response = await axiosInstance.get("http://localhost:5050/api/employee/getAllEmployees");
     return response.data;
   };
 
@@ -89,10 +89,6 @@ const Employee = () => {
                 </th>
 
                 <th scope="col" className="py-3 px-6">
-                  Father Name
-                </th>
-
-                <th scope="col" className="py-3 px-6">
                   Gender
                 </th>
 
@@ -102,10 +98,6 @@ const Employee = () => {
 
                 <th scope="col" className="py-3 px-6">
                   Phone Number
-                </th>
-
-                <th scope="col" className="py-3 px-6">
-                  Emergency Contact
                 </th>
 
                 <th scope="col" className="py-3 px-6">
@@ -123,14 +115,12 @@ const Employee = () => {
                   <td className="py-4 px-6">
                     <FaRegUser className="w-6 h-6" />
                   </td>
-                  <td className="py-4 px-6">{employee.name}</td>
-                  <td className="py-4 px-6">{employee.email}</td>
-                  <td className="py-4 px-6">{employee.role}</td>
-                  <td className="py-4 px-6">{employee.father_name}</td>
+                  <td className="py-4 px-6">{employee?.user?.name}</td>
+                  <td className="py-4 px-6">{employee?.user?.email}</td>
+                  <td className="py-4 px-6">{employee?.user?.role}</td>
                   <td className="py-4 px-6">{employee.gender}</td>
                   <td className="py-4 px-6">{employee.religion}</td>
-                  <td className="py-4 px-6">{employee.phone_number}</td>
-                  <td className="py-4 px-6">{employee.emergency_contact}</td>
+                  <td className="py-4 px-6">{employee?.phoneNumber}</td>
                   <td className="py-4 px-6">
                     <a
                       href="#"

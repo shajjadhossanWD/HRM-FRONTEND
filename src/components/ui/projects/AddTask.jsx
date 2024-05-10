@@ -14,7 +14,7 @@ import { IoPersonAdd } from "react-icons/io5";
 // get all projects
 const getAllProjects = async () => {
   const response = await axiosInstance.get(
-    `/api/project/getProjectsByManagerId/${
+    `http://localhost:5050/api/project/getProjectsByManagerId/${
       secureLocalStorage.getItem("user").employee_id
     }`
   );
@@ -24,7 +24,7 @@ const getAllProjects = async () => {
 // create User & Employee function
 const createTask = async (data) => {
   const response = await fetch(
-    `${import.meta.env.VITE_APP_BASE_URL}/api/project/createTask`,
+    `http://localhost:5050/api/project/createTask`,
     {
       method: "POST",
       headers: {
@@ -62,7 +62,7 @@ const AddTask = () => {
   // Search Employee function
   const searchEmployee = async () => {
     const response = await axiosInstance.post(
-      `/api/project/searchEmployeesInAssignment/${projectId}/${searchTerm}`
+      `http://localhost:5050/api/project/searchEmployeesInAssignment/${projectId}/${searchTerm}`
     );
     return response.data;
   };

@@ -28,7 +28,7 @@ const ProjectDetails = () => {
 
   const updateTaskStatus = async ({ taskId, newStatus }) => {
     const response = await axiosInstance.put(
-      `/api/project/${taskId}/updateTaskStatus`,
+      `http://localhost:5050/api/project/${taskId}/updateTaskStatus`,
       {
         status: newStatus,
       }
@@ -55,14 +55,14 @@ const ProjectDetails = () => {
 
   const getAllTasks = async () => {
     const response = await axiosInstance.get(
-      `/api/project/getProjectTasks/${id}`
+      `http://localhost:5050/api/project/getProjectTasks/${id}`
     );
     return response.data;
   };
 
   const searchEmployee = async (data) => {
     const response = await axiosInstance.post(
-      "/api/project/searchByName",
+      "http://localhost:5050/api/project/searchByName",
       data
     );
     return response.data;
@@ -92,7 +92,7 @@ const ProjectDetails = () => {
 
   const getProject = async () => {
     const response = await axiosInstance.get(
-      `/api/project/getProjectById/${id}`
+      `http://localhost:5050/api/project/getProjectById/${id}`
     );
     console.log("project data", response.data);
     return response.data;
@@ -102,7 +102,7 @@ const ProjectDetails = () => {
 
   useEffect(() => {
     const getAllPositions = async () => {
-      const response = await axiosInstance.get("/api/position/getAllPositions");
+      const response = await axiosInstance.get("http://localhost:5050/api/position/getAllPositions");
       if (response.data) {
         setSelectPositionValues(response.data.data);
       }
@@ -129,7 +129,7 @@ const ProjectDetails = () => {
     };
 
     const response = await axiosInstance.post(
-      "/api/project/createAssignment",
+      "http://localhost:5050/api/project/createAssignment",
       data
     );
 

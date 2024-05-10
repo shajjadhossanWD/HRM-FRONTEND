@@ -14,7 +14,7 @@ const SingleUserAttendance = ({ employee_id }) => {
     if (attendance === "") return alert("Please select attendance first");
 
     const response = await fetch(
-      `${import.meta.env.VITE_APP_BASE_URL}/api/attendance/createAttendance`,
+      `http://localhost:5050/api/attendance/createAttendance`,
       {
         method: "POST",
         headers: {

@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 // create User & Employee function
 const createUser = async (data) => {
   const response = await fetch(
-    `${import.meta.env.VITE_APP_BASE_URL}/api/department/createDepartment`,
+    `http://localhost:5050/api/department/createDepartment`,
     {
       method: "POST",
       headers: {

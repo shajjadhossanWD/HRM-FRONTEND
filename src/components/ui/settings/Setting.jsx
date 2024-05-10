@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 
 const updateUser = async ({ userId, formData }) => {
-  const response = await axiosInstance.put(`/api/auth/updateuser`, formData, {
+  const response = await axiosInstance.put(`http://localhost:5050/api/auth/updateuser`, formData, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
@@ -74,7 +74,7 @@ const Settings = () => {
 
   const fetchUserImage = async (userId) => {
     try {
-      const response = await axiosInstance.get(`/api/auth/getimage/${userId}`);
+      const response = await axiosInstance.get(`http://localhost:5050/api/auth/getimage/${userId}`);
       console.log("Fetched user image data:", response.data);
       secureLocalStorage.setItem("user", {
         ...secureLocalStorage.getItem("user"),

@@ -12,7 +12,7 @@ import { RiLockPasswordLine } from "react-icons/ri";
 // Login User function
 const LoginUser = async (data) => {
   const response = await fetch(
-    `${import.meta.env.VITE_APP_BASE_URL}/api/auth/loginuser`,
+    `http://localhost:5050/api/auth/loginuser`,
     {
       method: "POST",
       headers: {

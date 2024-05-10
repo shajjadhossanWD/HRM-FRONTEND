@@ -14,7 +14,7 @@ const Addpayroll = () => {
 
   const searchEmployee = async () => {
     const response = await axiosInstance.get(
-      `/api/employee/searchEmployee/${name}`
+      `http://localhost:5050/api/employee/searchEmployee/${name}`
     );
     return response.data;
   };

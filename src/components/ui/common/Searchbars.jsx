@@ -13,7 +13,7 @@ const Searchbars = ({
   handleSearchEmployee,
 }) => {
   const getAllPositions = async () => {
-    const response = await axiosInstance.get("/api/position/getAllPositions");
+    const response = await axiosInstance.get("http://localhost:5050/api/position/getAllPositions");
     return response.data;
   };
 
